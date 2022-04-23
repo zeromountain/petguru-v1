@@ -1,10 +1,29 @@
-import { useState } from 'react';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+
+import Layout from './components/common/Layout';
+import DetailPage from './pages/DetailPage';
+import HomePage from './pages/HomePage';
+import JoinPage from './pages/JoinPage';
+import LandingPage from './pages/LandingPage';
+import LoginPage from './pages/LoginPage';
+import PostsPage from './pages/PostsPage';
+import WritePage from './pages/WritePage';
 
 function App() {
   return (
-    <div>
-      <h2 className='font-bold text-2xl'>Hello Vite</h2>
-    </div>
+    <Routes>
+      <Route path='/' element={<Layout />}>
+        <Route index element={<LandingPage />} />
+        <Route path='login' element={<LoginPage />} />
+        <Route path='join' element={<JoinPage />} />
+        <Route path='home' element={<HomePage />} />
+        <Route path='posts' element={<PostsPage />}>
+          <Route path=':postId' element={<DetailPage />} />
+          <Route path='new' element={<WritePage />} />
+        </Route>
+      </Route>
+    </Routes>
   );
 }
 
