@@ -4,9 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import Layout from './components/common/Layout';
 import DetailPage from './pages/DetailPage';
 import HomePage from './pages/HomePage';
-import JoinPage from './pages/JoinPage';
 import LandingPage from './pages/LandingPage';
-import LoginPage from './pages/LoginPage';
 import MyPage from './pages/MyPage';
 import PostsPage from './pages/PostsPage';
 import WritePage from './pages/WritePage';
@@ -16,8 +14,6 @@ function App() {
     <Routes>
       <Route path='/' element={<Layout />}>
         <Route index element={<LandingPage />} />
-        <Route path='login' element={<LoginPage />} />
-        <Route path='join' element={<JoinPage />} />
         <Route path='home' element={<HomePage />} />
         <Route path='mypage' element={<MyPage />} />
         <Route path='posts' element={<PostsPage />}>
