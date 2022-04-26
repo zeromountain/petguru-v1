@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage';
 import JoinPage from './pages/JoinPage';
 import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/LoginPage';
+import MyPage from './pages/MyPage';
 import PostsPage from './pages/PostsPage';
 import WritePage from './pages/WritePage';
 
@@ -18,6 +19,7 @@ function App() {
         <Route path='login' element={<LoginPage />} />
         <Route path='join' element={<JoinPage />} />
         <Route path='home' element={<HomePage />} />
+        <Route path='mypage' element={<MyPage />} />
         <Route path='posts' element={<PostsPage />}>
           <Route path=':postId' element={<DetailPage />} />
           <Route path='new' element={<WritePage />} />
