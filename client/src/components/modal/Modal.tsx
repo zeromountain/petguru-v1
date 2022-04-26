@@ -13,7 +13,7 @@ interface Props {
 
 const Modal: React.FC<Props> = ({ children, isOpen, onClose, selector }) => {
   return (
-    <CSSTransition in={isOpen} timeout={300} className='modal' unmountOnExit>
+    <CSSTransition in={isOpen} timeout={10} className='modal' unmountOnExit>
       <Portal selector={selector}>
         {/* Overlay */}
         <div className=' fixed z-10 top-0 left-0 right-0 bottom-0 overflow-hidden flex justify-center items-center'>
