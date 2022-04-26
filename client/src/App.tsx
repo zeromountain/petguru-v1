@@ -4,7 +4,6 @@ import { Route, Routes } from 'react-router-dom';
 import Layout from './components/common/Layout';
 import DetailPage from './pages/DetailPage';
 import HomePage from './pages/HomePage';
-import LandingPage from './pages/LandingPage';
 import MyPage from './pages/MyPage';
 import PostsPage from './pages/PostsPage';
 import WritePage from './pages/WritePage';
@@ -13,8 +12,7 @@ function App() {
   return (
     <Routes>
       <Route path='/' element={<Layout />}>
-        <Route index element={<LandingPage />} />
-        <Route path='home' element={<HomePage />} />
+        <Route index element={<HomePage />} />
         <Route path='mypage' element={<MyPage />} />
         <Route path='posts' element={<PostsPage />}>
           <Route path=':postId' element={<DetailPage />} />
