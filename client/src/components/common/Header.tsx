@@ -10,7 +10,7 @@ interface Props {
 const Header: React.FC<Props> = ({ onOpen }) => {
   return (
     <header className='flex justify-between items-center border-b border-neutral-400 p-5'>
-      <Link to='/home'>
+      <Link to='/'>
         <img src={Logo} alt='logo' className='w-16 cursor-pointer' />
       </Link>
       {/* TODO: 로그인한 경우 옵션 버튼 (글쓰기, 마이페이지, 로그아웃) 렌더링 */}
