@@ -17,7 +17,7 @@ const Layout = () => {
     console.log('login');
   };
   return (
-    <div className='max-w-7xl h-screen mx-auto bg-neutral-200	'>
+    <div className='max-w-7xl h-screen overflow-y-auto mx-auto bg-neutral-200	'>
       <Header onOpen={handleOpen} />
       <Outlet />
       <AuthModalContainer
