@@ -5,7 +5,7 @@ import Card from './Card';
 
 const List = () => {
   return (
-    <ul className='grid mobile:flex-1 tablet:grid-cols-2 desktop:grid-cols-4 items-center'>
+    <ul className='grid mobile:flex-1 tablet:grid-cols-2 desktop:grid-cols-4 pl-3'>
       {data.map((item) => (
         <Card
           key={item.id}
