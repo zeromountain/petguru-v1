@@ -12,7 +12,7 @@ interface Props {
 
 const Card: React.FC<Props> = ({ title, division, comments, views, likes }) => {
   return (
-    <li className='w-[calc(100% - 1rem)] h-[15rem] relative flex flex-col justify-center items-center p-6 m-[10px] bg-white shadow-lg	 rounded-3xl cursor-pointer hover:opacity-60'>
+    <li className='w-[100%-1rem] h-[15rem] relative flex flex-col justify-center items-center p-6 m-[10px] bg-white shadow-lg	 rounded-3xl cursor-pointer transition-all transform hover:scale-105 hover:opacity-60'>
       <h4 className='font-semibold text-[1.5rem]'>{title}</h4>
       <span className='text-[2rem]'>🐶</span>
       <p className='italic'>{division}</p>
