@@ -3,6 +3,7 @@ import React from 'react';
 import Division from './Division';
 import Editor from './Editor';
 import Title from './Title';
+import WriteButtons from './WriteButtons';
 
 const Write = () => {
   return (
@@ -12,7 +13,9 @@ const Write = () => {
         <Division />
         <Editor />
       </section>
-      <section>{/* 취소 글등록 버튼 */}</section>
+      <section className='flex justify-end'>
+        <WriteButtons />
+      </section>
     </>
   );
 };
