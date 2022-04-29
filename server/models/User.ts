@@ -25,6 +25,8 @@ const userSchema: Schema = new Schema({
   },
   nickname: {
     type: String,
+    required: true,
+    unique: true,
   },
   date: {
     type: Date,
