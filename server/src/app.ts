@@ -2,8 +2,8 @@ import express, { Express, Request, Response } from 'express';
 import dotenv from 'dotenv';
 
 import connectDB from '../config/database';
-import auth from './routes/api/auth';
-import user from './routes/api/user';
+
+import auth from './routes/auth.routes';
 
 dotenv.config();
 
@@ -22,8 +22,11 @@ app.get('/', (req: Request, res: Response) => {
   res.send('Express + TypeScript Server');
 });
 
+// routes
+
 app.use('/api/auth', auth);
-app.use('/api/user', user);
+// app.use('/api/user', user);
+// app.use('/api/post', post);
 
 app.listen(port, () => {
   console.log(`⚡️[server]: Server is running at https://localhost:${port}`);
