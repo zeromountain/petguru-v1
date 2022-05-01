@@ -20,6 +20,8 @@ const UserSchema = new Schema(
       maxlength: 25,
       unique: true,
     },
+    likePost: [{ type: Schema.Types.ObjectId, ref: 'Post' }],
+    readList: [{ type: Schema.Types.ObjectId, ref: 'Post' }],
     // avatar: {
     //   type: String,
     //   default:
