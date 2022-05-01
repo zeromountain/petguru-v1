@@ -43,6 +43,11 @@ const authCtrl = {
       return res.status(201).json({
         msssage: '회원가입이 완료됐습니다.',
         access_token,
+        user: {
+          // @ts-ignore
+          ...newUser._doc,
+          password: '',
+        },
       });
     } catch (err) {
       return res.status(500).json({
@@ -82,6 +87,11 @@ const authCtrl = {
       return res.status(200).json({
         message: '로그인에 성공했습니다.',
         access_token,
+        user: {
+          // @ts-ignore
+          ...newUser._doc,
+          password: '',
+        },
       });
     } catch (err) {
       console.error(err);
